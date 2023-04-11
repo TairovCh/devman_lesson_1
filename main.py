@@ -1,9 +1,11 @@
 import requests
 
+location = ["/svo", "/london", "/череповца"]
 
-url = 'https://wttr.in/san%20francisco?nTqu&lang=en'
+url_template = 'https://wttr.in/{}?n&lang=ru&T&Q'
 
-response = requests.get(url)
-response.raise_for_status()
-
-print(response.text)
+for x in location:
+    url = url_template.format(x)
+    response = requests.get(url)
+    response.raise_for_status()
+    print(response.text)
