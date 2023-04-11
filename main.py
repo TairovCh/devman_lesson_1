@@ -2,7 +2,7 @@ import requests
 
 location = ["/svo", "/london", "/череповца"]
 
-url_template = 'https://wttr.in/{}?n&lang=ru&T&Q'
+url_template = 'https://wttr.in/{}?n&lang=ru&T&Q&M&m'
 
 for x in location:
     url = url_template.format(x)
